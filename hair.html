@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Web Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"/>
+  <style>
+    .font-righteous {
+      font-family: 'Righteous', cursive;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <header class="border-b">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="text-3xl font-bold text-red-500 font-righteous">FOUR YOU</div>
+      <div class="flex items-center space-x-4">
+        <input class="border rounded-full px-4 py-2" placeholder="Search" type="text"/>
+        <a class="text-gray-600 hover:text-gray-800" href="#"><i class="fas fa-shopping-bag"></i></a>
+        <a class="text-gray-600 hover:text-gray-800" href="#"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
+    <div class="container mx-auto py-2 px-6">
+      <nav class="flex justify-center space-x-4">
+        <a class="text-gray-600 hover:text-gray-800" href="whatsnew.html">What's New</a>
+        <a class="text-gray-600 hover:text-gray-800" href="makeup.html">Makeup</a>
+        <a class="text-gray-600 hover:text-gray-800" href="skincare.html">Skin</a>
+        <a class="text-gray-600 hover:text-gray-800" href="hair.html">Hair</a>
+        <a class="text-gray-600 hover:text-gray-800" href="fragrance.html">Fragrance</a>
+        <a class="text-gray-600 hover:text-gray-800" href="men.html">Men</a>
+      </nav>
+    </div>
+  </header>
+  <div class="container mx-auto py-8 px-6">
+    <img src="hairimg.png" alt="Promotional banner with Plum products and a model" class="w-full h-auto rounded-lg"/>
+  </div>
+  <main class="container mx-auto py-8 px-6">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-semibold">Top Categories</h2>
+    </div>
+    <div class="flex space-x-4 overflow-x-auto">
+      <div class="flex-none w-48">
+        <a href="allhair.html">
+        <img alt="All category image" class="w-full h-32 object-cover rounded-lg" height="200" src="hairimg.jpg" width="200"/>
+      </a>
+      <p class="text-center mt-2">All</p>
+      </div>
+      <div class="flex-none w-48">
+        <a href="shampoo.html">
+        <img alt="Shampoo category image" class="w-full h-32 object-cover rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/w8OV72K7d6k8_fI6R1s4IQAhoZYuN5zYdSlY3ccsIsE.jpg" width="200"/>
+      </a>
+      <p class="text-center mt-2">Shampoo</p>
+      </div>
+      <div class="flex-none w-48">
+        <img alt="Hair Styling category image" class="w-full h-32 object-cover rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/b1sUg7DOD0jb-NF_bbd8dxTNJNIFhXQ7xQirmaMtenY.jpg" width="200"/>
+        <p class="text-center mt-2">Hair Styling</p>
+      </div>
+      <div class="flex-none w-48">
+        <img alt="Hair Serum category image" class="w-full h-32 object-cover rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/IIABEzXSeEGrYclXrdbjK97k8cMG7azAyH1EETzUrPs.jpg" width="200"/>
+        <p class="text-center mt-2">Hair Serum</p>
+      </div>
+      <div class="flex-none w-48">
+        <img alt="Hair Oil category image" class="w-full h-32 object-cover rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/Bev2IxBEzLhvY4e2_xRvKMqr9bJkcmNsjCy12wJ_yog.jpg" width="200"/>
+        <p class="text-center mt-2">Hair Oil</p>
+      </div>
+      <div class="flex-none w-48">
+        <img alt="Dermocosmetics category image" class="w-full h-32 object-cover rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/igY4EGlht9ixZ0Qf3BZ-AtQygdvJgFr2d3iyO78AWPU.jpg" width="200"/>
+        <p class="text-center mt-2">Dermocosmetics</p>
+      </div>
+    </div>
+  </main>
+  <footer class="border-t py-4">
+    <div class="container mx-auto text-center text-gray-600">
+      <a class="hover:text-gray-800" href="#">Track Order</a> |
+      <a class="hover:text-gray-800" href="#">Help Centre</a>
+    </div>
+  </footer>
+</body>
+</html>

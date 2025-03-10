@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Functionality</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="container mx-auto">
+        <h1 class="text-2xl font-bold mb-4">Search Page</h1>
+        <div class="flex items-center mb-4">
+            <input id="searchInput" type="text" placeholder="Type your search..." class="border rounded-l px-4 py-2 w-full">
+            <button id="searchButton" class="bg-blue-500 text-white rounded-r px-4 py-2">Search</button>
+        </div>
+        <div id="results" class="mt-4"></div>
+    </div>
+
+    <script>
+        document.getElementById('searchButton').addEventListener('click', function() {
+            const query = document.getElementById('searchInput').value;
+            document.getElementById('results').innerText = `You searched for: ${query}`;
+        });
+    </script>
+</body>
+</html>

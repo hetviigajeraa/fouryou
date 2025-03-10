@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>My Profile - FOUR YOU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"/>
+    <style>
+        .title-font {
+            font-family: 'Righteous', cursive; /* Apply Righteous font */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-pink-200 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="font-bold text-red-500 title-font">
+                FOUR YOU
+            </div>
+            <nav class="space-x-4">
+                <a class="text-gray-800 hover:text-red-500" href="main.html">Home</a>
+                <a class="text-gray-800 hover:text-red-500" href="aboutus.html">About</a>
+                <a class="text-gray-800 hover:text-red-500" href="logout.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold text-center text-red-500 title-font mb-8">My Profile</h1>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8" id="profile-info">
+            <h2 class="text-2xl font-semibold mb-4">Profile Information</h2>
+            <div class="mb-4">
+                <label class="block text-gray-700">Name:</label>
+                <p id="user-name" class="text-gray-600"></p>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Email:</label>
+                <p id="user-email" class="text-gray-600"></p>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Phone:</label>
+                <p id="user-phone" class="text-gray-600"></p>
+            </div>
+            <button class="mt-4 bg-red-500 text-white py-2 px-4 rounded-md" onclick="editProfile()">Edit Profile</button>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-semibold mb-4">My Orders</h2>
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr class="w-full bg-gray-200">
+                        <th class="py-2 px-4 text-left">Order ID</th>
+                        <th class="py-2 px-4 text-left">Product</th>
+                        <th class="py-2 px-4 text-left">Amount</th>
+                        <th class="py-2 px-4 text-left">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="order-list">
+                    <!-- Orders will be populated here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-8 text-center">
+            <button class="bg-red-500 text-white py-2 px-4 rounded-md" onclick="logout()">Log Out</button>
+        </div>
+    </div>
+
+    <script>
+        // Fetch user data from backend
+        async function fetchUser Data() {
+            try {
+                const response = await fetch('http://localhost:5000/api/user', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': 'Bearer ' + localStorage.getItem('token') // Assuming you store token in localStorage
+                    }
+                });
+                const data = await response.json();
+                if (response.ok) {
+                    document.getElementById('user-name').innerText = data.name;
+                    document.getElementById('user-email').innerText = data.email;
+                    document.getElementById('user-phone').innerText = data.phone;
+                    // Populate orders
+                    const orderList = document.getElementById('order-list');
+                    data.orders.forEach(order => {
+                        const row = `<tr>
+                                        <td class="py-2 px-4 border-b">${order.id}</td>
+                                        <td class="py-2 px-4 border-b">${order.product}</td>
+                                        <td class="py-2 px-4 border-b">${order.amount}</td>
+                                        <td class="py-2 px-4 border-b">${order.status}</td>
+                                    </tr>`;
+                        orderList.innerHTML += row;
+                    });
+                } else {
+                    alert(data.message);
+                }
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        }
+
+        // Call fetchUser Data on page load
+        window.onload = fetchUser Data;
+
+        function editProfile() {
+            // Logic to edit profile
+            alert('Edit profile functionality not implemented yet.');
+        }
+
+        function logout() {
+            localStorage.removeItem('token'); // Clear token
+            window.location.href = 'login.html'; // Redirect to login
+        }
+    </script>
+</body>
+</html>

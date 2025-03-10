@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Fragrance Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"/>
+  <style>
+    .righteous-font {
+      font-family: 'Righteous', cursive;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <header class="border-b">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="text-2xl font-bold text-red-500 righteous-font">FOUR YOU</div>
+      <div class="flex items-center space-x-4">
+        <input class="border rounded-full px-4 py-1" placeholder="Search" type="text"/>
+        <i class="fas fa-search text-gray-600"></i>
+        <i class="fas fa-shopping-cart text-gray-600"></i>
+        <i class="fas fa-user text-gray-600"></i>
+      </div>
+    </div>
+    <div class="container mx-auto py-2 px-6">
+      <nav class="flex justify-center space-x-4">
+        <a class="text-gray-600 hover:text-gray-800" href="whatsnew.html">What's New</a>
+        <a class="text-gray-600 hover:text-gray-800" href="makeup.html">Makeup</a>
+        <a class="text-gray-600 hover:text-gray-800" href="skincare.html">Skin</a>
+        <a class="text-gray-600 hover:text-gray-800" href="hair.html">Hair</a>
+        <a class="text-gray-600 hover:text-gray-800" href="fragrance.html">Fragrance</a>
+        <a class="text-gray-600 hover:text-gray-800" href="men.html">Men</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="relative">
+    <img alt="A man with blue eyes and a beard, wearing a black leather jacket, with a bottle of BOSS Bottled Absolu perfume on the right" class="w-full h-auto" height="512" src="fragranceimg.jpg" width="1200"/>
+  </div>
+
+  <main class="container mx-auto py-6 px-6">
+    <h2 class="text-2xl font-semibold mb-4">Shop By Fragrance Notes</h2>
+    <div class="flex space-x-2 mb-6">
+      <button class="px-4 py-2 bg-black text-white rounded-full">Floral</button>
+      <button class="px-4 py-2 border rounded-full">Fruity</button>
+      <button class="px-4 py-2 border rounded-full">Woody</button>
+      <button class="px-4 py-2 border rounded-full">Musky</button>
+      <button class="px-4 py-2 border rounded-full">Citrus</button>
+      <button class="px-4 py-2 border rounded-full">Spicy</button>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="text-center">
+        <img alt="Nivea Women Pearl & Beauty Deodorant Roll On 48h" class="mx-auto mb-2" height="300" src="niveaimg.jpg" width="150"/>
+        <div class="text-sm text-gray-500">Nivea</div>
+        <div class="font-semibold">Nivea Women Pearl & Beauty Deodorant Roll On 48h</div>
+        <div class="text-sm text-gray-500 line-through">₹209</div>
+        <div class="text-sm text-red-500">₹199 (5% Off)</div>
+      </div>
+      <div class="text-center">
+        <img alt="Plum Bodylovin Hawaiian Rumba Body Mist (100ml)" class="mx-auto mb-2" height="300" src="plumimgg.jpg" width="150"/>
+        <div class="text-sm text-gray-500">Plum</div>
+        <div class="font-semibold">Plum Bodylovin Hawaiian Rumba Body Mist (100ml)</div>
+        <div class="text-sm text-gray-500 line-through">₹525</div>
+        <div class="text-sm text-red-500">₹499 (5% Off)</div>
+      </div>
+      <div class="text-center">
+        <img alt="RENEE Bloom Eau De Parfum (50ml)" class="mx-auto mb-2" height="300" src="https://storage.googleapis.com/a1aa/image/zfCqvMX0RNO82UXRSFDb9ZrzB__MHh7vZp99G-CowAw.jpg" width="150"/>
+        <div class="text-sm text-gray-500">RENEE</div>
+        <div class="font-semibold">RENEE Bloom Eau De Parfum (50ml)</div>
+        <div class="text-sm text-gray-500 line-through">₹599</div>
+        <div class="text-sm text-red-500">₹499 (17% Off)</div>
+      </div>
+      <div class="text-center">
+        <img alt="Layer'r Wottagirl! Vanilla Twist Body Splash (150ml)" class="mx-auto mb-2" height="300" src="wottagirl.jpg" width="150"/>
+        <div class="text-sm text-gray-500">Layer'r</div>
+        <div class="font-semibold">Layer'r Wottagirl! Vanilla Twist Body Splash (150ml)</div>
+        <div class="text-sm text-gray-500 line-through">₹275</div>
+        <div class="text-sm text-red-500">₹249 (9% Off)</div>
+      </div>
+    </div>
+  </main>
+
+  <div class="container mx-auto p-4">
+    <h1 class="text-2xl font-semibold mb-4">Best Of Perfumes On Offer</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img alt="Various perfume bottles including Playboy and other brands" class="w-full h-48 object-cover" height="400" src="playboyimg.jpg" width="600"/>
+        <div class="p-4">
+          <p class="text-gray-700">Up to 40% off on energising scents</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img alt="Two Guess perfume bottles with a decorative background" class="w-full h-48 object-cover" height="400" src="guessimg.jpg" width="600"/>
+        <div class="p-4">
+          <p class="text-gray-700">Up to 40% off on statement fragrances</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img alt="Engage perfume bottles with a colorful background" class="w-full h-48 object-cover" height="400" src="engageimg.jpg" width="600"/>
+        <div class="p-4">
+          <p class="text-gray-700">Up to 50% off on everyday scents</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="border-t py-4">
+    <div class="container mx-auto text-center text-gray-600">
+      © 2025 Fragrance Shop. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
